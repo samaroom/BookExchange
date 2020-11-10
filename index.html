@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<body>
+
+  <style>
+body {
+  background-color: #eff1f8;
+}
+</style>
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -7,42 +14,71 @@
 
     <title>Simple Database App</title>
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body style="background-color:#eff1f8;">
-    <h1>Welcome to 915UX-Pro's Book Exchange Service!</h1>
+  <nav style="background: #00353E;">
+<ul id="ul">
+    <li><img src="logo.png" id="logo"></li>
+    <li><a style="color:white" href='#'>Home</a></li>
+    <li><a style="text-indent: 5em;" href='#'>Buy</a></li>
+    <li><a style="text-indent: 5em;" href='#'>Sell</a></li>
+    <li><a style="text-indent: 5em;" href='#'>Rent</a></li>
+    <li><a style="text-indent: 5em;" href='#'>About</a></li>
+    <li><a style="text-indent: 5em;" href='#'>Login</a></li>
+</ul>
+</nav>
+  
+    <h1 style="text-align:center;">Welcome to 915UX-Pro's Book Exchange Service!</h1>
 
-    <ul>
-      <li>
-        <a href="create.php"><strong>Create</strong></a> - View Book Database
-      </li>
-      <li>
-        <a href="read.php"><strong>Read</strong></a> - Rent a book
-      </li>
-    </ul>
-    
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/7.21.0/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="/__/firebase/7.21.0/firebase-analytics.js"></script>
 
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
-    
-     <!--Set the configuration for your app
-  // TODO: Replace with your project's config object-->
-  var config = {
-    apiKey: AIzaSyCDCTsTUnfvIJWMm4oTiyaFJKNy4GkOs5I,
-    authDomain: BookExchange915UX.firebaseapp.com,
-    databaseURL: https://BookExchange915UX.firebaseio.com,
-    storageBucket: gs://bookexchange915ux.appspot.com
-  };
-  firebase.initializeApp(config);
+<div class="w3-content w3-section" style="max-width:500px">
+  <a href="bk1.html">
+  <img class="mySlides" src="bk1.png" style="width:100%;"> </a>
+  <img class="mySlides" src="bk2.png" style="width:100%">
+  <img class="mySlides" src="bk3.png" style="width:100%">
+</div>
 
-  <!--Get a reference to the database service-->
-  var database = firebase.database();
-  </body>
+<script>
+
+ var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 7000); // Change image every 7 seconds
+}
+</script>
+<h2>&nbsp;</h2>
+
+
+<a href = "dailyDeals.html">
+<div class="center">
+  <button title = "Daily Deals" style ="background:#00353E; color:white; width:500px; height:60px" class="w3-button w3-black">View Our Daily Deals!
+  </button>
+</div>
+</a>
+<h2>&nbsp; </h2>
+<h2 style="text-align:center;"> What's On Sale Right Now! </h2>
+
+
+<ul id="ul">
+      
+  <li><img src="witchhunter.jpg" alt="Witch Hunter" style="width:200px;"></li>
+  <li style="color:#00353E"> Testtttttttttttttttttttttttt</li> 
+  <li><img src="AlexTrebek.jpg" alt="Alex Trebek" style="width:200px"></li>
+  <li style="color:#00353E"> Testtttttttttttttttttttttttt</li>
+  <li><img src="JohnGrisham.jpg" alt="John Grisham" style="width:200px"></li>
+  
+</ul>
+
+    </body>
 </html>
