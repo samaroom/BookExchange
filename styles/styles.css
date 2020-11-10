@@ -1,0 +1,96 @@
+/* 
+
+I will show you how to change a height of a standard Bootstrap navbar.
+
+*/
+
+.navbar {
+  min-height: 80px;
+}
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 80px;
+}
+.aligncenter {
+    text-align: center;
+}
+
+.navbar-toggle {
+  /* (80px - button height 34px) / 2 = 23px */
+  margin-top: 23px;
+  padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    /* (80px - line-height of 27px) / 2 = 26.5px */
+    padding-top: 26.5px;
+    padding-bottom: 26.5px;
+    line-height: 27px;
+  }
+
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #00353E;
+}
+
+ol{
+  list-style-type: none;
+}
+
+
+li {
+  float: left;
+  padding:2px;
+}
+
+li a {
+  display: block;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.side-by-side {
+  width: 100%;
+  border: 1px solid black;
+
+}
+.side-by-side li {
+  display: inline;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+div {
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+  border:1px solid black;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.center {
+  /*text-align:center;*/
+  border: 3px black;
+  background-color:#00353E;
+  bottom:1000px;
+}
+.h1{
+  text-align:center;
+}
+#button:hover {
+  background-color: #7e7ecc;
+}
+
