@@ -18,9 +18,6 @@
       href="https://naishare.com/images/favicon.png"
     />
     <style>
-        body{
-         background-color: #eff1f8;
-        }
       .forms-out {
         margin: 0 auto;
         font-family: "Fira Sans", sans-serif;
@@ -36,7 +33,7 @@
         padding: 30px 20px;
         max-width: 350px;
         margin: 0 auto;
-        background:#00353E;
+        background: #168ab8;
         border-radius: 5px;
         margin-bottom: 15px;
       }
@@ -79,51 +76,14 @@
       #forgot-password:hover {
         opacity: 0.7;
       }
-
-      ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #00353E;
-}
-li {
-  float: left;
-  padding:2px;
-}
-
-li a {
-  display: block;
-  color: white;
-  font-size: 30px;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
-}
     </style>
   </head>
   <body>
-
-
-  <nav style="background: #00353E;">
-<ul id="ul">
-    <li><img src="logo.png" id="logo"></li>
-    <li><a style="color:white" href='index.html'>Home</a></li>
-    <li><a style="text-indent: 3em;" href='#'>Buy</a></li>
-    <li><a style="text-indent: 3em;" href='#'>Sell</a></li>
-    <li><a style="text-indent: 3em;" href='#'>Rent</a></li>
-    <li><a style="text-indent: 3em;" href='#'>About</a></li>
-    <li><a style="text-indent: 3em;" href='#'>Cart</a></li>
-    <li><a style="text-indent: 3em;" href='login.html'>Login</a></li>
-</ul>
-</nav>
     <div class="forms-out">
       <div class="forms-in">
         <div id="registration-page" class="hide">
           <button id="show-login">Sign In</button>
           <h3>Sign Up</h3>
-          Name<br />
-          <input type="name" id="registration-fullname" /><br />
           Email <br />
           <input type="email" id="registration-email" /><br />
           Confirm Email <br />
@@ -133,20 +93,19 @@ li a {
             autocomplete="disable"
           /><br />
           Password <br />
-          <input type="password" id="registration-password"/><br />
+          <input type="password" id="registration-password" /><br />
           <center><button id="register">Sign Up</button></center>
         </div>
 
         <div id="login-page">
-          
+          <button id="show-register">Sign Up</button>
           <h3>Sign In</h3>
           Email <br />
           <input type="email" id="login-email" /><br />
           Password <br />
           <input type="password" id="login-password" /><br />
-          <p id="forgot-password" style="position:absolute; top:360px;">Forgot Password</p>
-          <center><button id="login" style="position:absolute;top:450px; left:700px;width:300px;background-color:#00353E;color:white">Sign In</button></center>
-          <button id="show-register" style="position:absolute;left:700px;top:500px;width:300px;background-color:#00353E;color:white">Sign Up</button>
+          <p id="forgot-password">Forgot Password</p>
+          <center><button id="login">Sign In</button></center>
         </div>
 
         <div id="homepage" class="hide">
@@ -156,7 +115,7 @@ li a {
       </div>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
 
@@ -185,7 +144,6 @@ li a {
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
-
     <script>
       //invokes firebase authentication.
       const auth = firebase.auth();
@@ -215,7 +173,6 @@ li a {
       });
 
       const register = () => {
-        const name=document.querySelector("#registration-fullname").value;
         const email = document.querySelector("#registration-email").value;
         const reemail = document.querySelector("#registration-reemail").value;
         const password = document.querySelector("#registration-password").value;
